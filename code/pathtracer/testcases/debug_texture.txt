@@ -1,0 +1,31 @@
+
+PerspectiveCamera {
+    center 0 60 400
+    direction 0 0 -1
+    angle 30
+    width 1024
+    height 768
+    flength 0
+    aperture 4
+}
+
+
+Materials {
+    numMaterials 1
+    Material {
+        texture {
+            color texture/planet4.ppm
+        }
+    }
+}
+
+Group {
+    numObjects 1
+
+    MaterialIndex 0
+    Sphere {
+        center -40 20 -20
+        radius 20
+    }
+}
+

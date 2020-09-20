@@ -1,0 +1,76 @@
+
+PerspectiveCamera {
+    center 0 0 500
+    direction 0 0 -1
+    angle 30
+    width 1024
+    height 768
+    flength 0
+    aperture 4
+}
+
+
+Materials {
+    numMaterials 13
+    Material {
+        emission 0.42 0.41 0.4
+        color 0 0 0
+    }
+    Material { color 0.75 0.25 0.25 }
+    Material { color 0.25 0.25 0.75 }
+    Material { color 0.75 0.75 0.75 }
+    Material { color 0.25 0.75 0.25 }
+    Material {
+        color 0.999 0.999 0.999
+        type spec
+    }
+    Material {
+        color 0.999 0.999 0.999
+        type refr
+    }
+    Material {
+        texture {
+            color texture/planet4.ppm
+        }
+    }
+    Material {
+        texture {
+            emission texture/planet4.ppm
+        }
+    }
+    Material {
+        texture {
+            color texture/wall_blue.ppm
+        }
+    }
+    Material {
+        texture {
+            color texture/wall_orange.ppm
+        }
+    }
+    Material {
+        texture {
+            color texture/wall_white_flower.ppm
+        }
+    }
+    Material {
+        texture {
+            type texture/laughingman_spec.ppm
+        }
+    }
+}
+
+Group {
+    numObjects 2
+    MaterialIndex 7
+    Sphere {
+        center 100 0 0
+        radius 5
+    }
+    MaterialIndex 8
+    Sphere {
+        center 0 0 -3000
+        radius 200
+    }
+}
+

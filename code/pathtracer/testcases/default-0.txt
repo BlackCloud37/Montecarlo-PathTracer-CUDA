@@ -1,0 +1,54 @@
+
+PerspectiveCamera {
+    center 0 60 400
+    direction 0 0 -1
+    angle 30
+    width 1024
+    height 768
+    flength 0
+    aperture 4
+}
+
+
+Materials {
+    numMaterials 8
+    Material {
+        emission 20 20 20
+        color 0 0 0
+    }
+    Material { color 0.75 0.25 0.25 }
+    Material { color 0.25 0.25 0.75 }
+    Material { color 0.75 0.75 0.75 }
+    Material { color 0.25 0.75 0.25 }
+    Material {
+        color 0.999 0.999 0.999
+        type spec
+    }
+    Material {
+        color 0.999 0.999 0.999
+        type refr
+    }
+    Material {
+        texture {
+            color texture/planet4.ppm
+        }
+    }
+}
+
+Group {
+    numObjects 1
+    MaterialIndex 0
+    Transform {
+    Scale 20 20 20
+        RevSurface {
+            profile BezierCurve {
+                controls
+                    [ -2 2 0 ]
+                    [ -4 0 0 ]
+                    [ 0 0 0 ]
+                    [ -2 -2 0 ]
+            }
+        }
+    }
+}
+
